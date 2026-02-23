@@ -39,23 +39,23 @@
 :root {
 	interpolate-size: allow-keywords;
 
-	--background: linear-gradient(45deg, #0c0a09 0%, #1c1917 45%, #0c0a09 100%);
-	--header: linear-gradient(90deg, #1c1917e0, #2dd4bf, #0c0a09);
-	--btn-accent: linear-gradient(135deg, #fb923c, #ea580c);
-	--btn-inherit: #fff7ed;
-	--accent: linear-gradient(135deg, #f97316, #c2410c);
-	--sub-title: linear-gradient(-135deg, #2dd4bf30, #042f2e);
-	--gift: #f0fdfae1;
-	--gift-bg: rgba(251, 146, 60, 0.1);
-	--gift-btn: linear-gradient(135deg, #9a3412, #431407);
+	--background: linear-gradient(45deg, #0a0a0a 0%, #171717 45%, #0a0a0a 100%);
+	--header: linear-gradient(90deg, #171717e0, #404040, #0a0a0a);
+	--btn-accent: linear-gradient(135deg, #525252, #262626);
+	--btn-inherit: #e5e5e5;
+	--accent: linear-gradient(135deg, #737373, #404040);
+	--sub-title: linear-gradient(-135deg, #40404030, #171717);
+	--gift: #f5f5f5;
+	--gift-bg: rgba(255, 255, 255, 0.03);
+	--gift-btn: linear-gradient(135deg, #262626, #0a0a0a);
 	--border-radius: 10px;
-	--container: #0c0a09;
-	--table: linear-gradient(180deg, #1c1917, #0c0a09);
-	--minus: #38bdf8;
-	--shadow: #fb923c50;
-	--second-shadow: #ea580c;
-	--text-shadow: #2dd4bf;
-	--list-bg: linear-gradient(90deg, rgba(45, 212, 191, 0.1), rgba(251, 146, 60, 0.1));
+	--container: #0a0a0a;
+	--table: linear-gradient(180deg, #171717, #0a0a0a);
+	--minus: #e11d48;
+	--shadow: rgba(0, 0, 0, 0.5);
+	--second-shadow: #262626;
+	--text-shadow: #737373;
+	--list-bg: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0));
 }
 
 * {
@@ -211,12 +211,14 @@ header img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 5px;
 }
 
 .h-violet-btn {
 	padding: 10px 20px;
 	font-size: 1rem;
 	border: 1px solid var(--btn-inherit);
+
 	margin-right: 5px;
 	font-weight: 700;
 	transition: all 0.3s ease-in-out;
@@ -244,9 +246,11 @@ header img {
 }
 
 .h-violet-btn:hover,
-.h-accent-btn:hover {
-	transform: scale(0.9);
-	box-shadow: 1px 1px 5px var(--gift);
+.h-accent-btn:hover,
+.btn-accent:hover {
+	transform: scale(0.95);
+	border: none;
+	box-shadow: 0 0 2px 3px var(--minus);
 }
 
 .h-app-link:hover {
@@ -358,7 +362,7 @@ header img {
 	padding-bottom: 10px;
 	margin: 30px auto;
 	background: var(--container);
-	box-shadow: 0 0 13px var(--second-shadow);
+	box-shadow: 0 0 10px var(--minus);
 }
 
 .container:nth-child(odd) {
@@ -445,7 +449,7 @@ table th {
 
 table tr:nth-child(even) {
 	background: var(--second-shadow);
-	box-shadow: 0 3px 3px var(--gift-bg);
+	box-shadow: 0 1px 3px var(--text-shadow);
 }
 .row-title {
 	padding-left: 10px;
@@ -561,10 +565,9 @@ summary {
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	background: var(--accent);
-	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
